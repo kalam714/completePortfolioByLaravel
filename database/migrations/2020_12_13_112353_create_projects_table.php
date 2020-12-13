@@ -18,6 +18,8 @@ class CreateProjectsTable extends Migration
             $table->string('title');
             $table->longText('description');
             $table->string('photo');
+            $table->string('slug');
+            $table->string('project_url')->nullable();
             $table->timestamps();
         });
     }
