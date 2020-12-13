@@ -23,3 +23,4 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('project','App\Http\Controllers\ProjectController');
+Route::resource('experience','App\Http\Controllers\ExperienceController');

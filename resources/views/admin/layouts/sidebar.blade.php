@@ -31,16 +31,16 @@
       </div>
     </li>
     <li class="nav-item">
-      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTable" aria-expanded="true"
-        aria-controls="collapseTable">
-        <i class="fas fa-fw fa-table"></i>
-        <span>Tables</span>
+      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseForm1" aria-expanded="true"
+        aria-controls="collapseForm1">
+        <i class="fab fa-fw fa-wpforms"></i>
+        <span>Experience</span>
       </a>
-      <div id="collapseTable" class="collapse" aria-labelledby="headingTable" data-parent="#accordionSidebar">
+      <div id="collapseForm1" class="collapse" aria-labelledby="headingForm" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
-          <h6 class="collapse-header">Tables</h6>
-          <a class="collapse-item" href="simple-tables.html">Simple Tables</a>
-          <a class="collapse-item" href="datatables.html">DataTables</a>
+          <h6 class="collapse-header">Experience</h6>
+          <a class="collapse-item" href="{{route('experience.index')}}">Experience List</a>
+          <a class="collapse-item" href="{{route('experience.create')}}">Add Experience</a>
         </div>
       </div>
     </li>
