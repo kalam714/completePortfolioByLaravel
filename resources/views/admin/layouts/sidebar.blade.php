@@ -45,37 +45,35 @@
       </div>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="ui-colors.html">
-        <i class="fas fa-fw fa-palette"></i>
-        <span>UI Colors</span>
+      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseForm11" aria-expanded="true"
+        aria-controls="collapseForm11">
+        <i class="fab fa-fw fa-wpforms"></i>
+        <span>Institute</span>
       </a>
-    </li>
-    <hr class="sidebar-divider">
-    <div class="sidebar-heading">
-      Examples
-    </div>
-    <li class="nav-item">
-      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePage" aria-expanded="true"
-        aria-controls="collapsePage">
-        <i class="fas fa-fw fa-columns"></i>
-        <span>Pages</span>
-      </a>
-      <div id="collapsePage" class="collapse" aria-labelledby="headingPage" data-parent="#accordionSidebar">
+      <div id="collapseForm11" class="collapse" aria-labelledby="headingForm" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
-          <h6 class="collapse-header">Example Pages</h6>
-          <a class="collapse-item" href="login.html">Login</a>
-          <a class="collapse-item" href="register.html">Register</a>
-          <a class="collapse-item" href="404.html">404 Page</a>
-          <a class="collapse-item" href="blank.html">Blank Page</a>
+          <h6 class="collapse-header">Institute</h6>
+          <a class="collapse-item" href="{{route('education.index')}}">Institute List</a>
+          <a class="collapse-item" href="{{route('education.create')}}">Add Institute</a>
         </div>
       </div>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="charts.html">
-        <i class="fas fa-fw fa-chart-area"></i>
-        <span>Charts</span>
+      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseForm111" aria-expanded="true"
+        aria-controls="collapseForm111">
+        <i class="fab fa-fw fa-wpforms"></i>
+        <span>Post</span>
       </a>
+      <div id="collapseForm111" class="collapse" aria-labelledby="headingForm" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+          <h6 class="collapse-header">Post</h6>
+          <a class="collapse-item" href="{{route('post.index')}}">All Post</a>
+          <a class="collapse-item" href="{{route('post.create')}}">Add Post</a>
+        </div>
+      </div>
     </li>
+  
     <hr class="sidebar-divider">
-    <div class="version" id="version-ruangadmin"></div>
+  
+ 
   </ul>

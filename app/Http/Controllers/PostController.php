@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Project;
+use App\Models\Post;
 use Illuminate\Support\Str;
 
-class ProjectController extends Controller
+class PostController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +15,8 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        $projects=Project::latest()->get();
-        return view('project.index',compact('projects'));
-        
+        $posts=Post::latest()->get();
+        return view('post.index',compact('posts'));
     }
 
     /**
@@ -27,7 +26,7 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        return view('project.create');
+        return view('post.create');
     }
 
     /**
@@ -44,18 +43,17 @@ class ProjectController extends Controller
             'photo'=>'required'
 
         ]);
-        $photo=$request->file('photo')->store('public/projects');
-        Project::create([
+        $photo=$request->file('photo')->store('public/posts');
+        Post::create([
 
             'title'=>$request->title,
             'slug'=>Str::slug($request->title),
             'description'=>$request->description,
-            'project_url'=>$request->project_url,
             'photo'=>$photo
 
         ]);
-        notify()->success('Project Created Successfully!');
-        return redirect('/project');
+        notify()->success('post Created Successfully!');
+        return redirect('/post');
     }
 
     /**
@@ -77,8 +75,8 @@ class ProjectController extends Controller
      */
     public function edit($id)
     {
-        $project=Project::find($id);
-        return view('project.edit',compact('project'));
+        $post=Post::find($id);
+        return view('post.edit',compact('post'));
     }
 
     /**
@@ -96,21 +94,20 @@ class ProjectController extends Controller
             'photo'=>'required'
 
         ]);
-        $project=Project::find($id);
-       $photo=$project->photo;
+        $post=Post::find($id);
+       $photo=$post->photo;
        if($request->file('photo')){
-        $photo=$request->file('photo')->store('public/projects');
-        \Storage::delete($project->photo);
+        $photo=$request->file('photo')->store('public/posts');
+        \Storage::delete($post->photo);
        
 
        }
-       $project->title=$request->title;
-       $project->description=$request->description;
-       $project->photo=$photo;
-       $project->project_url=$request->project_url;
-       $project->update();
-       notify()->success('project Update Successfully!');
-       return redirect('/project');
+       $post->title=$request->title;
+       $post->description=$request->description;
+       $post->photo=$photo;
+       $post->update();
+       notify()->success('Post Update Successfully!');
+       return redirect('/post');
     }
 
     /**
@@ -121,11 +118,11 @@ class ProjectController extends Controller
      */
     public function destroy($id)
     {
-        $project=Project::find($id);
-        $path=$project->photo;
-        $project->delete();
+        $post=Post::find($id);
+        $path=$post->photo;
+        $post->delete();
         \Storage::delete($path);
-        notify()->success('project Deleted Successfully!');
-        return redirect('/project');
+        notify()->success('Post Deleted Successfully!');
+        return redirect('/post');
     }
 }
