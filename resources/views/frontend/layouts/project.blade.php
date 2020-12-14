@@ -26,7 +26,7 @@
             <div class="item row">
                 @foreach($projects as $project)
                 <a class="col-md-4 col-12" href="{{$project->project_url}}" target="_blank">
-                <img class="img-fluid project-image rounded shadow-sm" src="{{Storage::url($project->photo)}}" alt="project name" />
+                <img class="img-fluid project-image rounded shadow-sm" height="300" width="100%" src="{{Storage::url($project->photo)}}" alt="project name" />
                 <hr>
                 </a>
                 <div class="desc col-md-8 col-12">
@@ -42,4 +42,5 @@
                             
             
         </div><!--//content-->  
-    </div><!--//section-inner-->      
+    </div><!--//section-inner-->                
+</section>

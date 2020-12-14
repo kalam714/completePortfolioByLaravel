@@ -20,7 +20,8 @@ Route::get('/admin/index', function () {
     return view('admin.index');
 });
 Auth::routes();
-Route::get('/','App\Http\Controllers\FrontendController@getProject');
+Route::get('/','App\Http\Controllers\FrontendController@getData');
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('project','App\Http\Controllers\ProjectController');
 Route::resource('experience','App\Http\Controllers\ExperienceController');
