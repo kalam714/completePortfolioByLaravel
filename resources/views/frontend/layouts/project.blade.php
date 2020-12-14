@@ -30,7 +30,7 @@
                 <hr>
                 </a>
                 <div class="desc col-md-8 col-12">
-                    <h3 class="title">{{$project->title}}</h3>
+                    <h3 class="title"><a href="">{{$project->title}}</a></h3>
                     <p class="mb-2">{{$project->description}}</p>
                     <p><a class="more-link" href="{{$project->project_url}}"><i class="fas fa-external-link-alt"></i>Source Code</a></p>
                 </div><!--//desc-->     

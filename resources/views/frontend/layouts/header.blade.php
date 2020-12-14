@@ -1,5 +1,5 @@
 <head>
-    <title>Boootstrap Portfolio/Resume Theme for Developers</title>
+    <title>Kalam's Portfolio</title>
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

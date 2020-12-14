@@ -21,6 +21,7 @@ Route::get('/admin/index', function () {
 });
 Auth::routes();
 Route::get('/','App\Http\Controllers\FrontendController@getData');
+Route::get('/singlePost/{slug}/{id}','App\Http\Controllers\FrontendController@singlePost')->name('single.post');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('project','App\Http\Controllers\ProjectController');

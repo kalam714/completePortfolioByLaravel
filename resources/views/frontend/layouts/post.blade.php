@@ -11,8 +11,8 @@
                 <hr>
                 </a>
                 <div class="desc col-md-8 col-12">
-                    <h3 class="title">{{$post->title}}</h3>
-                    <p class="mb-2">{{$post->description}}</p>
+                   <a href="{{route('single.post',[$post->slug,$post->id])}}"> <h3 class="title">{{$post->title}}</h3></a>
+                    <p class="mb-2"> {{Str::limit($post->description,50)}}</p>
                    <br>
                 </div><!--//desc-->     
                 @endforeach                                   
