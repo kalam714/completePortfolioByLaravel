@@ -1,3 +1,5 @@
+
+
 <footer class="footer">
     <div class="container text-center">
             <!--/* This template is free as long as you keep the attribution link below. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
@@ -7,6 +9,7 @@
 
 <!-- Javascript -->          
 <script type="text/javascript" src="{{asset('frontend/plugins/jquery-3.4.1.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('frontend/plugins/jquery.scrollUp.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('frontend/plugins/popper.min.js')}}"></script> 
 <script type="text/javascript" src="{{asset('frontend/plugins/bootstrap/js/bootstrap.min.js')}}"></script>    
 <script type="text/javascript" src="{{asset('frontend/plugins/jquery-rss/dist/jquery.rss.min.js')}}"></script> 

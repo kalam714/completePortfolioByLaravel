@@ -45,12 +45,12 @@
                 <div class="item row">
                     @foreach($projects as $project)
                     <a class="col-md-4 col-12" href="{{$project->project_url}}" target="_blank">
-                    <img class="img-fluid project-image rounded shadow-sm" src="{{Storage::url($project->photo)}}" alt="project name" />
+                    <img class="img-fluid project-image rounded shadow-sm"  src="{{Storage::url($project->photo)}}" alt="project name" />
                     <hr>
                     </a>
                     <div class="desc col-md-8 col-12">
                         <h5 class="title"><a href="{{route('details.project',[$project->slug,$project->id])}}">{{$project->title}}</a></h5>
-                        <p class="mb-2">{{Str::limit($project->description,50)}}</p></p>
+                        <p class="mb-2">{{Str::limit($project->description,200)}}</p></p>
                         <p><a class="more-link" href="{{$project->project_url}}"><i class="fas fa-external-link-alt"></i>Source Code</a></p>
                     </div><!--//desc-->     
                     @endforeach                     

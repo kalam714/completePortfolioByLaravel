@@ -17,6 +17,10 @@
                 </div><!--//desc-->     
                 @endforeach                                   
             </div><!--//item-->
+            <div>
+                {{ $posts->links() }}   
+            
+            </div>
 
         </div><!--//content-->
     </div><!--//section-inner-->

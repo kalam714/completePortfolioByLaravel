@@ -3,7 +3,7 @@
         <h2 class="heading">Skills</h2>
         <div class="content">
             <p class="intro">
-                Intro about your skills goes here. Keep the list lean and only show your primary skillset. You can always provide a link to your Linkedin or Github profile so people can get more info there.</p>
+            </p>
             
             <div class="skillset">
                

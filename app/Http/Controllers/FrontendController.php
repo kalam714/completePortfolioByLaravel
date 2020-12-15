@@ -11,10 +11,10 @@ use App\Models\Skill;
 class FrontendController extends Controller
 {
     public function getData(){
-        $projects=Project::latest()->paginate(3);
+        $projects=Project::latest()->paginate(2);
         $experiences=Experience::latest()->get();
         $educations=Education::latest()->get();
-        $posts=Post::latest()->paginate(3);
+        $posts=Post::latest()->paginate(2);
         $skills=Skill::latest()->get();
         return view('index',compact('projects','experiences','educations','posts','skills'));
     }

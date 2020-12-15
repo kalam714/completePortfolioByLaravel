@@ -13,12 +13,16 @@
     
     <!-- FontAwesome JS -->
     <script defer src="{{asset('frontend/fontawesome/js/all.js')}}"></script>
+    <script
+    src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js">
+  </script>
     
     <!-- Global CSS -->
     <link rel="stylesheet" href="{{asset('frontend/plugins/bootstrap/css/bootstrap.min.css')}}">   
     
     <!-- github calendar css -->
     <link rel="stylesheet" href="{{asset('frontend/plugins/github-calendar/dist/github-calendar.css')}}">
+ 
     <!-- github activity css -->    
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
     <link rel="stylesheet" href="{{asset('frontend/plugins/github-activity/github-activity-0.1.5.min.css')}}">

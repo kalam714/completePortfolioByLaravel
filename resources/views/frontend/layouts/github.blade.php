@@ -1,16 +1,25 @@
 <section class="github section">
     <div class="section-inner shadow-sm rounded">
         <h2 class="heading">My GitHub</h2>
-        <p>You can embed your GitHub contribution graph calendar using IonicaBizau's <a href="https://github.com/IonicaBizau/github-calendar" target="_blank">GitHub Calendar</a> widget. 
+       
         
-        <div id="github-graph" class="github-graph">
+        <div class="calendar">
+            <!-- Loading stuff -->
+            
+        </div>
+        <br>
+        <!--//github-graph-->
 
-        </div><!--//github-graph-->
+        <h2 class="heading">Github Activity</h2>
 
-        <p>You can also embed your GitHub activities using Casey Scarborough's <a href="https://github.com/caseyscarborough/github-activity" target="_blank">GitHub Activity Stream</a> widget.        
         <!--//Usage: https://caseyscarborough.com/projects/github-activity/ -->                       
         <div id="ghfeed" class="ghfeed">
         </div><!--//ghfeed-->
         
     </div><!--//secton-inner-->
+ 
+    <script>
+        GitHubCalendar(".calendar", "kalam714");
+
+    </script>
 </section>

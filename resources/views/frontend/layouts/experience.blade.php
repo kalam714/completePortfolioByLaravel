@@ -4,9 +4,11 @@
         <div class="content">
             <div class="item">
                 @foreach($experiences as $experience)
-                <h3 class="title">{{$experience->job_title}}  <b class="badge badge-info">{{$experience->position}}</b>- <span class="place"><a href="#">{{$experience->company_name}}</a></span> 
-                    <span class="year">({{$experience->since}})</span></h3>
+                <h1 class="text-danger"><b>{{$experience->job_title}}</b>  <b class="badge badge-info">{{$experience->position}}</b>- 
+                    <span class="place text-primary"><a href="#">{{$experience->company_name}}</a></span> 
+                    <span class="year">({{$experience->since}})</span></h1>
                 <p>{{$experience->description}}</p>
+                <br>
                 @endforeach
             </div><!--//item-->
             
