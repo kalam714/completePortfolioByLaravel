@@ -22,25 +22,28 @@
                     <thead class="thead-light">
                       <tr>
                         <th>Order</th>
-                        <th>Title</th>
-                        <th>Photo</th>
-                        <th>Description</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        
+                        <th>Message</th>
+                       
                         <th>Delete</th>
-                        <th>Edit</th>
+                 
                       </tr>
                     </thead>
                     <tbody>
-                        @foreach ($projects as $key=>$project)
+                        @foreach ($messages as $key=>$message)
                             
                       
                       <tr>
                         <td><a href="#">{{$key+1}}</a></td>
-                        <td>{{$project->title}}</td>
-                        <td><img src="{{Storage::url($project->photo)}}" width="80" height="80"></td>
+                        <td>{{$message->name}}</td>
+                        <td>{{$message->email}}</td>
                        
-                        <td>{{Str::limit($project->description,50)}}</td>
+                        <td>{{$message->message}}</td>
+                       
                         <td>
-                        <form action="{{route('project.destroy',[$project->id])}}" method="POST"
+                        <form action="{{route('message.destroy',[$message->id])}}" method="POST"
                             onsubmit="return confirmDelete()">
                             @csrf
                             {{method_field('DELETE')}}
@@ -48,7 +51,7 @@
 
                             </form>
                         </td>
-                    <td><a href="{{route('project.edit',[$project->id])}}" class="btn btn-primary">Edit</a></td>
+                    
                       </tr>
                       @endforeach
                       

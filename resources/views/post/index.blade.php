@@ -38,7 +38,7 @@
                         <td>{{$post->title}}</td>
                         <td><img src="{{Storage::url($post->photo)}}" width="80" height="80"></td>
                        
-                        <td>{{$post->description}}</td>
+                        <td>{{Str::limit($post->description,50)}}</td>
                         <td>
                         <form action="{{route('post.destroy',[$post->id])}}" method="POST"
                             onsubmit="return confirmDelete()">

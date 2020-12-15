@@ -93,7 +93,7 @@ class ProjectController extends Controller
         $validate=$request->validate([
             'title'=>'required',
             'description'=>'required',
-            'photo'=>'required'
+         
 
         ]);
         $project=Project::find($id);

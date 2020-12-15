@@ -72,6 +72,27 @@
         </div>
       </div>
     </li>
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseForm1111" aria-expanded="true"
+        aria-controls="collapseForm1111">
+        <i class="fab fa-fw fa-wpforms"></i>
+        <span>Skill</span>
+      </a>
+      <div id="collapseForm1111" class="collapse" aria-labelledby="headingForm" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+          <h6 class="collapse-header">Post</h6>
+          <a class="collapse-item" href="{{route('skill.index')}}">All Skill</a>
+          <a class="collapse-item" href="{{route('skill.create')}}">Add Skill</a>
+        </div>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link " href="{{route('message.get')}}">
+        <i class="fab fa-fw fa-wpforms"></i>
+        <span>Messages</span>
+      </a>
+    
+    </li>
   
     <hr class="sidebar-divider">
   

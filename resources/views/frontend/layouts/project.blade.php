@@ -30,8 +30,8 @@
                 <hr>
                 </a>
                 <div class="desc col-md-8 col-12">
-                    <h3 class="title"><a href="">{{$project->title}}</a></h3>
-                    <p class="mb-2">{{$project->description}}</p>
+                    <h3 class="title"><a href="{{route('details.project',[$project->slug,$project->id])}}">{{$project->title}}</a></h3>
+                    <p class="mb-2">{{Str::limit($project->description,50)}}</p>
                     <p><a class="more-link" href="{{$project->project_url}}"><i class="fas fa-external-link-alt"></i>Source Code</a></p>
                 </div><!--//desc-->     
                 @endforeach                     
