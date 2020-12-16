@@ -10,7 +10,7 @@
                     
                     <div class="featured-image has-ribbon">
                         <a href="">
-                        <img class="img-fluid project-image rounded shadow-sm" src="{{Storage::url($post->photo)}}"  />
+                        <img class="img-fluid post-image rounded shadow-sm" src="{{Storage::url($post->photo)}}"  />
                         </a>
                         <div class="ribbon">
                             <div class="text"></div>
@@ -42,7 +42,19 @@
                
         
 
-                @include('frontend.layouts.post')
+                <div class="item row">
+                    @foreach($posts as $post)
+                    <a class="col-md-4 col-12" href="{{$post->post_url}}" target="_blank">
+                    <img class="img-fluid post-image rounded shadow-sm"  src="{{Storage::url($post->photo)}}" alt="post name" />
+                    <hr>
+                    </a>
+                    <div class="desc col-md-8 col-12">
+                        <h5 class="title"><a href="{{route('single.post',[$post->slug,$post->id])}}">{{$post->title}}</a></h5>
+                        <p class="mb-2">{{Str::limit($post->description,200)}}</p></p>
+                        
+                    </div><!--//desc-->     
+                    @endforeach                     
+                </div>
                
                 
               <!--//section-->

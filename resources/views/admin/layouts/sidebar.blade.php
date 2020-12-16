@@ -86,6 +86,7 @@
         </div>
       </div>
     </li>
+
     <li class="nav-item">
       <a class="nav-link " href="{{route('message.get')}}">
         <i class="fab fa-fw fa-wpforms"></i>
@@ -93,8 +94,37 @@
       </a>
     
     </li>
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseForm11111" aria-expanded="true"
+        aria-controls="collapseForm11111">
+        <i class="fab fa-fw fa-wpforms"></i>
+        <span>Admin</span>
+      </a>
+      <div id="collapseForm11111" class="collapse" aria-labelledby="headingForm" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+          <h6 class="collapse-header">Admin</h6>
+          <a class="collapse-item" href="{{ route('register')}}">Add Admin</a>
+          <a class="collapse-item" href="{{ route('get.admin')}}">Admin List</a>
+          <a class="collapse-item"  href="{{ route('logout') }}"
+          onclick="event.preventDefault();
+          document.getElementById('logout-form').submit();">
+          <i class="fal fa-sign-out"></i>
+          {{ __('Logout') }}
+          
+          </a>
+          <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+            @csrf
+        </form>
+        </div>
+      </div>
+    </li>
+ 
+    <br>
+   
   
     <hr class="sidebar-divider">
+
+  
   
  
   </ul>
