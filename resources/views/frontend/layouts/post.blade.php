@@ -11,7 +11,7 @@
                 <hr>
                 </a>
                 <div class="desc col-md-8 col-12">
-                   <a href="{{route('single.post',[$post->slug,$post->id])}}"> <h3 class="title">{{$post->title}}</h3></a>
+                    <b class="text-primary"><a href="{{route('single.post',[$post->slug,$post->id])}}">{{$post->title}}</a></b>
                     <p class="mb-2"> {{Str::limit($post->description,50)}}</p>
                    <br>
                 </div><!--//desc-->     

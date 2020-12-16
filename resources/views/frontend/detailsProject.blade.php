@@ -10,17 +10,19 @@
                     
                     <div class="featured-image has-ribbon">
                         <a href="">
-                        <img class="img-fluid project-image rounded shadow-sm" src="{{Storage::url($project->photo)}}"  />
+                        <img class="img-fluid project-image rounded shadow-sm" src="{{Storage::url($project->photo)}}"  /><br>
                         </a>
                         <div class="ribbon">
                             <div class="text"></div>
                         </div>
                     </div>
                     
-                    <h3 class="title mb-3">{{$project->title}}</h3>
+                    <b class="text-primary">{{$project->title}}</b>
                         
                     <div class="desc text-left">                                    
-                        <p>{{$project->description}}</p>
+                        <p>{{$project->description}}</p> <br>
+                        <p><a class="more-link" href="{{$project->project_url}}" target="_blank">
+                            <i class="fas fa-external-link-alt"></i><span class="text-danger"><b>Source Code</b></span></a></p><br>
                     </div><!--//desc-->         
                     <a class="btn btn-cta-secondary" href="/"><i class="fas fa-backward"></i> Back To Home</a> 
                     
@@ -39,24 +41,30 @@
            
             </div><!--//primary-->
             <div class="secondary col-lg-4 col-12">
-               
+                <aside class="blog aside section">
+                    <div class="section-inner shadow-sm rounded">
+                        <h2 class="heading">All Project</h2>
+                <div  class="content">
         
 
                 <div class="item row">
                     @foreach($projects as $project)
-                    <a class="col-md-4 col-12" href="{{$project->project_url}}" target="_blank">
+                    <a class="col-md-4 col-12">
                     <img class="img-fluid project-image rounded shadow-sm"  src="{{Storage::url($project->photo)}}" alt="project name" />
                     <hr>
                     </a>
                     <div class="desc col-md-8 col-12">
-                        <h5 class="title"><a href="{{route('details.project',[$project->slug,$project->id])}}">{{$project->title}}</a></h5>
+                        <b class="text-primary"><a href="{{route('details.project',[$project->slug,$project->id])}}">{{$project->title}}</a></b>
                         <p class="mb-2">{{Str::limit($project->description,200)}}</p></p>
-                        <p><a class="more-link" href="{{$project->project_url}}"><i class="fas fa-external-link-alt"></i>Source Code</a></p>
-                    </div><!--//desc-->     
+                        <p><a class="more-link" href="{{$project->project_url}}" target="_blank"><i class="fas fa-external-link-alt">
+                            </i><span class="text-danger"><b>Source Code</b></span></a></p><br>  
+                    </div><!--//desc-->  
+                     
                     @endforeach                     
                 </div>
                
-                
+                </div>
+                    </div>
               <!--//section-->
                 
     
