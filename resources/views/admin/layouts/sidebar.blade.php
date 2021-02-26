@@ -100,6 +100,20 @@
         </div>
       </div>
     </li>
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseForm111111" aria-expanded="true"
+        aria-controls="collapseForm111111">
+        <i class="fab fa-fw fa-wpforms"></i>
+        <span>Information</span>
+      </a>
+      <div id="collapseForm111111" class="collapse" aria-labelledby="headingForm" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+        
+          <a class="collapse-item" href="{{route('information.index')}}">Information</a>
+          <a class="collapse-item" href="{{route('information.create')}}">Add Information</a>
+        </div>
+      </div>
+    </li>
 
     <li class="nav-item">
       <a class="nav-link " href="{{route('message.get')}}">

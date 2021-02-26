@@ -3,10 +3,12 @@
         <h2 class="heading sr-only">Basic Information</h2>
         <div class="content">
             <ul class="list-unstyled">
-                <li><i class="fas fa-map-marker-alt"></i><span class="sr-only">Location:</span>Dhaka,Bangladesh</li>
-                <li><i class="fas fa-file"></i><span class="sr-only">Email:</span><a href="{{asset('resume/kalam.pdf')}}"><b>Resume</b></a></li>
-                <li><i class="fas fa-envelope"></i><span class="sr-only">Email:</span><a href="#">kalamahmed714@gmail.com</a></li>
-                <li><i class="fas fa-link"></i><span class="sr-only">Website:</span><a href="https://kalam714.pythonanywhere.com/">KalamAhmed.com</a></li>
+                @foreach($informations as $information)
+                <li><i class="fas fa-map-marker-alt"></i><span class="sr-only">Location:</span>{{$information->location}}</li>
+                <li><i class="fas fa-file"></i><span class="sr-only">Email:</span><a href="{{Storage::url($information->resume)}}"><b>Resume</b></a></li>
+                <li><i class="fas fa-envelope"></i><span class="sr-only">Email:</span><a href="#">{{$information->email}}</a></li>
+                <li><i class="fas fa-link"></i><span class="sr-only">Website:</span><a href="{{$information->website}}">KalamAhmed.com</a></li>
+                @endforeach
             </ul>
         </div><!--//content-->  
     </div><!--//section-inner-->                 
