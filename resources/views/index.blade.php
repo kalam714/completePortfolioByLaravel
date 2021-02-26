@@ -5,13 +5,15 @@
         <div class="row">
             <div class="primary col-lg-8 col-12">
                 <section class="about section">
+                  @foreach($abouts as $about)     
                     <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">About Me</h2>
+                        <h2 class="heading">{{$about->heading}}</h2>
                         <div class="content">
-              <p>Write a brief intro about yourself. It's a good idea to include your personal interests and hobbies as well. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec. Commodo ligula eget dolor. Aenean massa.</p>
+              <p>{{$about->desc}}</p>
                          
                         </div><!--//content-->
-                    </div><!--//section-inner-->                 
+                    </div><!--//section-inner-->   
+                    @endforeach     
                 </section><!--//section-->
                 @include('frontend.layouts.project')
     

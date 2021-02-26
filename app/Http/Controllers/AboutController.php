@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Education;
-
-class EducationController extends Controller
+use App\Models\About;
+class AboutController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +13,8 @@ class EducationController extends Controller
      */
     public function index()
     {
-        $educations=Education::latest()->get();
-        return view('institute.index',compact('educations'));
+        $abouts=About::latest()->get();
+        return view('about.index',compact('abouts'));
     }
 
     /**
@@ -25,7 +24,7 @@ class EducationController extends Controller
      */
     public function create()
     {
-     return view('institute.create');
+        return view('about.create');
     }
 
     /**
@@ -37,22 +36,23 @@ class EducationController extends Controller
     public function store(Request $request)
     {
         $validate=$request->validate([
-            'degree'=>'required',
-            'institute'=>'required',
-            'since'=>'required'
+            'heading'=>'required',
+            'desc'=>'required'
+           
 
         ]);
         
-        Education::create([
+       About::create([
 
-            'degree'=>$request->degree,
-            'institute'=>$request->institute,
-            'since'=>$request->since
+            'heading'=>$request->heading,
+            'desc'=>$request->desc
+            
             
 
         ]);
-        notify()->success('Institute Added Successfully!');
-        return redirect('/auth/education');
+        notify()->success('Information Added Successfully!');
+        return redirect('/auth/about');
+        
     }
 
     /**
@@ -74,8 +74,8 @@ class EducationController extends Controller
      */
     public function edit($id)
     {
-        $education=Education::find($id);
-        return view('institute.edit',compact('education'));
+        $about=About::find($id);
+        return view('about.edit',compact('about'));
     }
 
     /**
@@ -88,20 +88,19 @@ class EducationController extends Controller
     public function update(Request $request, $id)
     {
         $validate=$request->validate([
-            'degree'=>'required',
-            'institute'=>'required',
-            'since'=>'required'
+            'heading'=>'required',
+            'desc'=>'required',
+         
 
         ]);
-       $education=education::find($id);
-       $education->degree=$request->degree;
-       $education->institute=$request->institute;
-       $education->since=$request->since;
-
-   
-       $education->update();
-       notify()->success('education Update Successfully!');
-       return redirect('/auth/education');
+        $about=About::find($id);
+    
+       $about->heading=$request->heading;
+       $about->desc=$request->desc;
+     
+       $about->update();
+       notify()->success('about Update Successfully!');
+       return redirect('/auth/about');
     }
 
     /**
@@ -112,10 +111,10 @@ class EducationController extends Controller
      */
     public function destroy($id)
     {
-        $education=Education::find($id);
-        $education->delete();
+        $about=About::find($id);
+        $about->delete();
        
-        notify()->success('Education Deleted Successfully!');
-        return redirect('/auth/education');
+        notify()->success('about Deleted Successfully!');
+        return redirect('/auth/about');
     }
 }

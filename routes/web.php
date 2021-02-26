@@ -35,6 +35,7 @@ Route::resource('experience','App\Http\Controllers\ExperienceController');
 Route::resource('education','App\Http\Controllers\EducationController');
 Route::resource('post','App\Http\Controllers\PostController');
 Route::resource('skill','App\Http\Controllers\SkillController');
+Route::resource('about','App\Http\Controllers\AboutController');
 Route::get('messageGet','App\Http\Controllers\ContactController@getMessage')->name('message.get');
 Route::delete('destroy/message/{id}','App\Http\Controllers\ContactController@destroyMessage')->name('message.destroy');
 Route::get('/getAdmin','App\Http\Controllers\HomeController@getAdmin')->name('get.admin');

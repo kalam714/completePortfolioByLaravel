@@ -55,7 +55,7 @@ class ProjectController extends Controller
 
         ]);
         notify()->success('Project Created Successfully!');
-        return redirect('/project');
+        return redirect('/auth/project');
     }
 
     /**
@@ -110,7 +110,7 @@ class ProjectController extends Controller
        $project->project_url=$request->project_url;
        $project->update();
        notify()->success('project Update Successfully!');
-       return redirect('/project');
+       return redirect('/auth/project');
     }
 
     /**
@@ -126,6 +126,6 @@ class ProjectController extends Controller
         $project->delete();
         \Storage::delete($path);
         notify()->success('project Deleted Successfully!');
-        return redirect('/project');
+        return redirect('/auth/project');
     }
 }

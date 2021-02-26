@@ -8,6 +8,7 @@ use App\Models\Experience;
 use App\Models\Education;
 use App\Models\Post;
 use App\Models\Skill;
+use App\Models\About;
 class FrontendController extends Controller
 {
     public function getData(){
@@ -16,7 +17,8 @@ class FrontendController extends Controller
         $educations=Education::latest()->get();
         $posts=Post::latest()->paginate(2);
         $skills=Skill::latest()->get();
-        return view('index',compact('projects','experiences','educations','posts','skills'));
+        $abouts=About::latest()->get();
+        return view('index',compact('projects','experiences','educations','posts','skills','abouts'));
     }
     public function singlePost($slug,$id){
         $post=Post::find($id)->where('slug',$slug)->first();

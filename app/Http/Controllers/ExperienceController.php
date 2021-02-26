@@ -56,7 +56,7 @@ class ExperienceController extends Controller
 
         ]);
         notify()->success('Experience Added Successfully!');
-        return redirect('/experience');
+        return redirect('/auth/experience');
     }
 
     /**
@@ -108,7 +108,7 @@ class ExperienceController extends Controller
    
        $experience->update();
        notify()->success('Experience Update Successfully!');
-       return redirect('/experience');
+       return redirect('/auth/experience');
     }
 
     /**
@@ -123,6 +123,6 @@ class ExperienceController extends Controller
         $experience->delete();
        
         notify()->success('Experience Deleted Successfully!');
-        return redirect('/experience');
+        return redirect('/auth/experience');
     }
 }

@@ -53,7 +53,7 @@ class PostController extends Controller
 
         ]);
         notify()->success('post Created Successfully!');
-        return redirect('/post');
+        return redirect('/auth/post');
     }
 
     /**
@@ -107,7 +107,7 @@ class PostController extends Controller
        $post->photo=$photo;
        $post->update();
        notify()->success('Post Update Successfully!');
-       return redirect('/post');
+       return redirect('/auth/post');
     }
 
     /**
@@ -123,6 +123,6 @@ class PostController extends Controller
         $post->delete();
         \Storage::delete($path);
         notify()->success('Post Deleted Successfully!');
-        return redirect('/post');
+        return redirect('/auth/post');
     }
 }

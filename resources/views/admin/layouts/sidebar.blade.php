@@ -66,7 +66,7 @@
       </a>
       <div id="collapseForm111" class="collapse" aria-labelledby="headingForm" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
-          <h6 class="collapse-header">Post</h6>
+   
           <a class="collapse-item" href="{{route('post.index')}}">All Post</a>
           <a class="collapse-item" href="{{route('post.create')}}">Add Post</a>
         </div>
@@ -80,9 +80,23 @@
       </a>
       <div id="collapseForm1111" class="collapse" aria-labelledby="headingForm" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
-          <h6 class="collapse-header">Post</h6>
+       
           <a class="collapse-item" href="{{route('skill.index')}}">All Skill</a>
           <a class="collapse-item" href="{{route('skill.create')}}">Add Skill</a>
+        </div>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseForm11111" aria-expanded="true"
+        aria-controls="collapseForm11111">
+        <i class="fab fa-fw fa-wpforms"></i>
+        <span>About</span>
+      </a>
+      <div id="collapseForm11111" class="collapse" aria-labelledby="headingForm" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+        
+          <a class="collapse-item" href="{{route('about.index')}}">About</a>
+          <a class="collapse-item" href="{{route('about.create')}}">Add About</a>
         </div>
       </div>
     </li>
