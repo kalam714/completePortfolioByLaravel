@@ -1,16 +1,18 @@
 <header class="header">
-    <div class="container clearfix">                       
-        <img class="profile-image img-fluid float-left rounded-circle" height="90" width="200" src="{{asset('frontend/images/profile.jpg')}}" alt="profile image" />
+    <div class="container clearfix">  
+      @foreach($headers as $header)                     
+        <img class="profile-image img-fluid float-left rounded-circle" height="90" width="200" src="{{Storage::url($header->photo)}}" alt="profile image" />
         <div class="profile-content float-left">
-            <h1 class="name">Kalam Ahmed</h1>
-            <h2 class="desc">Full Stack Web Developer</h2>   
+            <h1 class="name">{{$header->name}}</h1>
+            <h2 class="desc">{{$header->type}}</h2>   
             <ul class="social list-inline">
-                <li class="list-inline-item"><a href="https://www.linkedin.com/in/kalam-ahmed-6602701a1/"><i class="fab fa-linkedin-in"></i></a></li>
-                <li class="list-inline-item"><a href="https://github.com/kalam714"><i class="fab fa-github-square"></i></a></li>    
-                <li class="list-inline-item"><a href="https://stackoverflow.com/users/14717608/kalam-ahmed"><i class="fab fa-stack-overflow"></i></a></li>   
+                <li class="list-inline-item"><a href="{{$header->linkedin}}"><i class="fab fa-linkedin-in"></i></a></li>
+                <li class="list-inline-item"><a href="{{$header->github}}"><i class="fab fa-github-square"></i></a></li>    
+                <li class="list-inline-item"><a href="{{$header->stackoverflow}}"><i class="fab fa-stack-overflow"></i></a></li>   
                        
             </ul> 
         </div><!--//profile-->
+        @endforeach
         <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#match">
                Contact Me
               </button>    

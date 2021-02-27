@@ -9,6 +9,7 @@ use App\Models\Education;
 use App\Models\Post;
 use App\Models\Skill;
 use App\Models\About;
+use App\Models\Header;
 use App\Models\Information;
 
 class FrontendController extends Controller
@@ -21,7 +22,8 @@ class FrontendController extends Controller
         $skills=Skill::latest()->get();
         $abouts=About::latest()->get();
         $informations=Information::latest()->get();
-        return view('index',compact('projects','experiences','educations','posts','skills','abouts','informations'));
+        $headers=Header::latest()->get();
+        return view('index',compact('projects','experiences','educations','posts','skills','abouts','informations','headers'));
     }
     public function singlePost($slug,$id){
         $post=Post::find($id)->where('slug',$slug)->first();

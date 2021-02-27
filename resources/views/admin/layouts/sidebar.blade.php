@@ -114,6 +114,20 @@
         </div>
       </div>
     </li>
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseForm1111111" aria-expanded="true"
+        aria-controls="collapseForm1111111">
+        <i class="fab fa-fw fa-wpforms"></i>
+        <span>Header Section</span>
+      </a>
+      <div id="collapseForm1111111" class="collapse" aria-labelledby="headingForm" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+        
+          <a class="collapse-item" href="{{route('header.index')}}">Header Info.</a>
+          <a class="collapse-item" href="{{route('header.create')}}">Add Header Info.</a>
+        </div>
+      </div>
+    </li>
 
     <li class="nav-item">
       <a class="nav-link " href="{{route('message.get')}}">
